@@ -166,7 +166,15 @@ const about = {
       // {
       //   name: "Build the Future",
       //   description: <>Studied online marketing and personal branding.</>,
-      // },
+      // },      
+    ],
+    images: [
+  //         {
+  //           src: "/images/projects/project-01/cover-04.jpg",
+  //           alt: "Project image",
+  //           width: 16,
+  //           height: 9,
+  //         },      
     ],
   },
   // technical: {
