@@ -15,7 +15,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&aposs Newsletter</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -53,7 +53,7 @@ const home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name}&aposs Portfolio`,
   description: `Portfolio website showcasing my project as a ${person.role}`,
   headline: <>Robotics, Softwares, Artificial Intelligence</>,
   featured: {
@@ -63,7 +63,7 @@ const home = {
   },
   subline: (
     <>
-      I'm Dun Yan, an Electrical Software Engineer specializing in AI, 
+      I&aposm Dun Yan, an Electrical Software Engineer specializing in AI, 
       software development, and robotics. I build intelligent systems that bridge hardware and software to solve real-world challenges.
     </>
   ),
@@ -166,7 +166,15 @@ const about = {
       // {
       //   name: "Build the Future",
       //   description: <>Studied online marketing and personal branding.</>,
-      // },
+      // },      
+    ],
+    images: [
+  //         {
+  //           src: "/images/projects/project-01/cover-04.jpg",
+  //           alt: "Project image",
+  //           width: 16,
+  //           height: 9,
+  //         },      
     ],
   },
   // technical: {
