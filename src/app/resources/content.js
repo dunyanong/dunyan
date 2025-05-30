@@ -58,7 +58,7 @@ const home = {
   headline: <>Robotics, Softwares, Artificial Intelligence</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Recent Work: <strong className="ml-4">Mobile Turtle Robot</strong></>,
     href: "/project/building-once-ui-a-customizable-design-system",
   },
   subline: (
@@ -102,9 +102,10 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "A* Star Singapore",
+        company: "A*Star Singapore",
         timeframe: "May 2025 - Present",
         role: "Robotics Research Engineer Intern",
+        logo: "/images/companylogo/astar.png",
         achievements: [
           // <>
           //   Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
@@ -129,6 +130,7 @@ const about = {
         company: "Halogen Capital",
         timeframe: "May 2024 - August 2024",
         role: "Software Engineer Intern",
+        logo: "/images/companylogo/halogen_capital_logo.jpeg",
         achievements: [
         ],
         images: [],
@@ -137,14 +139,17 @@ const about = {
         company: "DoctorOnCall",
         timeframe: "Apr 2023 - Jun 2023",
         role: "Software Engineer Intern",
+        logo: "/images/companylogo/doc.png",
         achievements: [
         ],
         images: [],
+        
       },
       {
         company: "Lambdatest",
         timeframe: "Dec 2022 - Mar 2023",
         role: "Software Apprentice",
+        logo: "/images/companylogo/lambdatest.png",
         achievements: [
         ],
         images: [],
@@ -252,11 +257,6 @@ const gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
       src: "/images/gallery/halogen_photo.jpg",
       alt: "image",
       orientation: "horizontal",
@@ -277,22 +277,27 @@ const gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
+      src: "/images/gallery/gz.jpg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-3.jpg",
+      src: "/images/gallery/turkey.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },    
+    {
+      src: "/images/gallery/shanghai.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
+      src: "/images/gallery/ntueee.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
+      src: "/images/gallery/merlion.jpeg",
       alt: "image",
       orientation: "vertical",
     },

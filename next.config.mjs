@@ -13,6 +13,9 @@ const nextConfig = {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],
   },
+  images: {
+    domains: ["img.youtube.com"],
+  },  
 };
 
 export default withMDX(nextConfig);
