@@ -63,7 +63,7 @@ const home = {
   },
   subline: (
     <>
-      I&aposm Dun Yan, an Electrical Software Engineer specializing in AI, 
+      I am Dun Yan, an Electrical Software Engineer specializing in AI, 
       software development, and robotics. I build intelligent systems that bridge hardware and software to solve real-world challenges.
     </>
   ),

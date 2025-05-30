@@ -1,0 +1,49 @@
+---
+title: "Image Classification Using CNN"
+publishedAt: "2025-05-31"
+summary: "Built a CNN-based image classification system on CIFAR-10 with VGGNet-inspired architecture from a paper, achieving 90% accuracy. Included model visualization, training pipeline, and regularization techniques."
+images:
+  - "/images/ProjectImages/imageclassification/vggnetpaper.png"
+  - "/images/ProjectImages/imageclassification/cifar10.png"
+  - "/images/ProjectImages/imageclassification/ic2.png"
+team:
+  - name: "Dun Yan"
+    role: "Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/dunyan"
+link: "https://github.com/dunyanong/cnn-image-classification"
+---
+
+## Overview
+
+This project demonstrates image classification using a Convolutional Neural Network (CNN) on the CIFAR-10 dataset. CIFAR-10 consists of 60,000 32×32 color images categorized into 10 classes. The objective was to evaluate and improve CNN performance through various optimization and regularization techniques, while exploring ANN and VGG-inspired architectures.
+
+## Key Features
+
+- **Multiple Models**: Implemented both a simple Artificial Neural Network (ANN) and a deeper CNN model.
+- **Data Preprocessing**: Included image normalization and visualization of dataset samples.
+- **Model Evaluation**: Measured and compared accuracy across model versions.
+- **Improved CNN Architecture**:
+  - Batch Normalization
+  - Dropout layers
+  - L2 Regularization
+  - Learning Rate Scheduling
+  - Data Augmentation
+
+## Technologies Used
+
+- **Python 3**: Primary language for development
+- **TensorFlow & Keras**: Deep learning frameworks for building and training neural networks
+- **NumPy**: For numerical operations and data manipulation
+- **Matplotlib**: For visualizing model performance and sample images
+
+## Challenges and Learnings
+
+A key challenge was improving performance beyond the baseline CNN without overfitting. Techniques like dropout and L2 regularization helped generalize the model. Implementing VGGNet principles (e.g., 3×3 filters and deeper networks) led to a notable accuracy jump. Experimenting with learning rate schedules and augmentation also deepened understanding of model training dynamics.
+
+## Outcome
+
+The final improved CNN model achieved **90%** test accuracy, a significant improvement over the basic CNN (~70%) and ANN (~49%). This highlights how model architecture and training strategies critically impact performance in deep learning tasks.
+
+---
+
