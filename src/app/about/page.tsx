@@ -113,7 +113,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
+            {/* {about.calendar.display && (
               <Flex
                 fitWidth
                 border="brand-alpha-medium"
@@ -137,7 +137,7 @@ export default function About() {
                   icon="chevronRight"
                 />
               </Flex>
-            )}
+            )} */}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -190,12 +190,27 @@ export default function About() {
                 {about.project.title}
               </Heading>
               <Column fillWidth gap="s" marginBottom="40">
+
                 {about.project.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
+                      <Flex gap="8" vertical="center">
+                        {experience.logo && (
+                          <img
+                          src={experience.logo}
+                          alt={`${experience.company} logo`}
+                          style={{
+                            width: "30x",
+                            height: "30px",
+                            objectFit: "contain",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        )}
+                        <Text id={experience.company} variant="heading-strong-l">
+                          {experience.company}
+                        </Text>
+                      </Flex>
                       <Text variant="heading-default-xs" onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
@@ -204,15 +219,16 @@ export default function About() {
                       {experience.role}
                     </Text>
                     <Column as="ul" gap="0">
-                      {experience.achievements.length > 0 && experience.achievements.map((achievement: JSX.Element, index: number) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      ))}
+                      {experience.achievements.length > 0 &&
+                        experience.achievements.map((achievement: JSX.Element, index: number) => (
+                          <Text
+                            as="li"
+                            variant="body-default-m"
+                            key={`${experience.company}-${index}`}
+                          >
+                            {achievement}
+                          </Text>
+                        ))}
                     </Column>
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="s" paddingLeft="40" wrap>
@@ -237,9 +253,14 @@ export default function About() {
                     )}
                   </Column>
                 ))}
+
               </Column>
             </>
           )}
+
+
+
+
 
           {about.studies.display && (
             <>
