@@ -1,0 +1,64 @@
+---
+title: "Multi-Agent Path Finding: Conflict-Based Search"
+publishedAt: "2024-07-29"
+summary: "Implemented an efficient Conflict-Based Search (CBS) algorithm for Multi-Agent Path Finding, with an OpenCV-based animation system to visualize agent movements and path planning in grid-based environments. Credit to RAP-Lab from SJTU"
+images:
+  - "/images/ProjectImages/mapf/arena.gif"
+  - "/images/ProjectImages/mapf/random.gif"
+  - "/images/ProjectImages/mapf/toy.gif"
+team:
+  - name: "Dun Yan"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/dunyan"
+  - name: "Richard"
+    role: "Researcher"
+    avatar: "/images/ProjectImages/sjtu.png"
+    linkedIn: "https://rap-lab.github.io/"    
+link: "https://github.com/dunyanong/cbs-mapf-public"
+---
+
+## Overview
+
+In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated projectflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
+
+## Key Features
+
+- **Conflict-Based Search Algorithm**: Implemented a complete CBS algorithm that efficiently resolves conflicts between multiple agents' paths through a constraint-based tree search approach.
+- **Space-Time A* Path Finding**: Developed a specialized Space-Time A* algorithm that computes optimal paths while respecting timing and spatial constraints.
+- **Conflict Detection & Resolution**: Built sophisticated detection for both vertex conflicts (agents occupying the same position) and edge conflicts (agents crossing the same edge).
+- **OpenCV Visualization System**: Created an animation system that renders agent movements, paths, and environments using OpenCV, with support for GIF generation.
+- **MovingAI Map Format Support**: Added parsers for the MovingAI benchmark map and scenario formats, enabling testing on standardized MAPF datasets.
+- **Constraint Tree Search**: Implemented a priority queue-based search through the constraint tree, guaranteeing optimal solutions when time permits.
+
+# Technologies Used
+
+- **C++**: Core implementation language with modern C++ features (variants, unordered containers)
+- **OpenCV**: For visualization of agents, paths, and environments
+- **CMake**: Build system for cross-platform compatibility
+- **AVL Tree**: Custom balanced tree implementation for efficient constraint management
+- **Priority Queues**: For optimal constraint-based search ordering
+- **Data Structures**: Custom implementations of various specialized data structures for path representation and conflict management
+
+# Algorithm Implementation
+
+The CBS algorithm works in two levels:
+
+1. **High Level**: A constraint tree search that resolves conflicts by adding constraints
+2. **Low Level**: Space-Time A* path finding for individual agents under constraints
+
+When a conflict is detected between two agents' paths, the algorithm creates two child nodes in the constraint tree, each containing an additional constraint for one of the conflicting agents. This branching continues until a solution without conflicts is found.
+
+Key implementation details:
+- Vertex constraints prevent an agent from occupying a specific vertex at a given time
+- Edge constraints prevent an agent from traversing a specific edge at a given time
+- The algorithm prioritizes expanding nodes with lower total cost, ensuring optimality
+
+# Visualization Capabilities
+
+The project includes a comprehensive visualization system built on OpenCV that can:
+- Render the grid environment with obstacles and free spaces
+- Show animated agent movements with unique identifiers
+- Visualize paths with color coding for each agent
+- Generate frame-by-frame animations and compile them into GIFs
+- Display conflict resolution in real-time
